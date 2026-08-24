@@ -8,7 +8,12 @@ import header from "../assets/header.png"
 const MenuBar = () => {
 
     return (
-        <AppBar position={"static"}>
+        <AppBar
+            position={"static"}
+            sx={{
+                paddingTop: "env(safe-area-inset-top)",
+            }}
+        >
             <Toolbar>
                 <Link to={"/"}>
                     <div style={{display: "flex"}}>
