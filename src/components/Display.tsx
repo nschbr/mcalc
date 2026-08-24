@@ -1,0 +1,30 @@
+import {Fragment, ReactNode} from "react";
+import {Box, Card, CardActionArea, CardContent, Grid} from "@mui/material";
+interface IProps {
+    children: ReactNode;
+    size: number;
+    color?: string;
+    disabled?: boolean;
+}
+
+const Display = ({children, size, color, disabled}: IProps) => {
+
+    return (
+        <Fragment>
+            <Grid item xs={size}>
+                <Card elevation={3} sx={ color ? { backgroundColor: color} : {}}>
+                    <CardActionArea disabled={disabled}>
+                        <CardContent>
+                            <Box sx={{maxHeight: "55px", minHeight: "55px"}}>
+                                {children}
+                            </Box>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+            </Grid>
+        </Fragment>
+    )
+
+}
+
+export default Display;

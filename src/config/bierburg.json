@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "key": "p4",
+      "name": "Pils 0.4",
+      "mark": true,
+      "value": {
+        "default": 3.5,
+        "return": 2
+      }
+    },
+    {
+      "key": "r4",
+      "name": "Radler 0.4",
+      "mark": true,
+      "value": {
+        "default": 3.5,
+        "return": 2
+      }
+    },
+    {
+      "key": "h4",
+      "name": "Helles 0.4",
+      "mark": true,
+      "value": {
+        "default": 3.5,
+        "return": 2
+      }
+    },
+    {
+      "key": "grf3",
+      "name": "Grape Free 0.33",
+      "mark": true,
+      "value": {
+        "default": 3,
+        "return": 2
+      }
+    }
+  ]
+}
