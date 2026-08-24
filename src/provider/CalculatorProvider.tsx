@@ -1,4 +1,4 @@
-import {Context, createContext, ReactNode, useCallback, useEffect, useState} from "react";
+import {Context, createContext, ReactNode, useCallback, useState} from "react";
 import {Entity} from "../model/Model.ts";
 import bierburg from '../config/bierburg.json';
 import megabar from '../config/megabar.json';
@@ -19,7 +19,7 @@ export interface ICalculatorContext {
     productsCount: number;
     providedMarks: number;
     requiredMarks: number;
-    options: {products: Array<Entity>};
+    options: { products: Array<Entity> };
 }
 
 interface IProps {
@@ -38,22 +38,18 @@ export const CalculatorProvider = ({type, name, children}: IProps) => {
     const [requiredMarks, setRequiredMarks] = useState<number>(0);
     const [providedMarks, setProvidedMarks] = useState<number>(0);
     const [productsCount, setProductsCount] = useState<number>(0);
-    const [options] = useState<{products: Array<Entity>}>(type === "bb" ? bierburg : megabar);
+    const [options] = useState<{ products: Array<Entity> }>(type === "bb" ? bierburg : megabar);
     const navigate: NavigateFunction = useNavigate();
 
-    useEffect(() => {
-        console.debug(total, given, requiredMarks, providedMarks, productsCount);
-    }, [given, productsCount, providedMarks, requiredMarks, total]);
-
     const addValue = useCallback((entity: Entity) => {
-        if(entity.mark) setRequiredMarks(requiredMarks + 1);
+        if (entity.mark) setRequiredMarks(requiredMarks + 1);
         setProductsCount(productsCount + 1);
         setTotal(total + entity.value.default + entity.value.return);
         return total;
     }, [productsCount, requiredMarks, total])
 
     const addGiven = useCallback((value: number, mark: boolean) => {
-        if(mark) setProvidedMarks(providedMarks + 1);
+        if (mark) setProvidedMarks(providedMarks + 1);
         setGiven(given + value);
         return given;
     }, [given, providedMarks])
@@ -61,7 +57,7 @@ export const CalculatorProvider = ({type, name, children}: IProps) => {
     const save = useCallback(async () => {
         const value = localStorage.getItem("mcalc-sales") || "[]";
         const sales: Array<object> = JSON.parse(value);
-        sales.push({ time: new Date(), total: total, given: given});
+        sales.push({time: new Date(), total: total, given: given});
         localStorage.setItem("mcalc-sales", JSON.stringify(sales));
     }, [given, total])
 

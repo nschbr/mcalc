@@ -17,7 +17,7 @@ const History = () => {
         },
         {
             field: 'given',
-            headerName: 'Gegeben'
+            headerName: 'Bekommen'
         }
     ];
 
