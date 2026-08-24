@@ -25,6 +25,7 @@ const enterKeyframe = keyframes`
     opacity: 0.5;
   }
 `;
+
 const StyledCard = styled(Card)`
   && .MuiTouchRipple-child {
     background-color: #0096ff;
