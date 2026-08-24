@@ -12,8 +12,6 @@ export default defineConfig({
     plugins: [
         react(),
         VitePWA({
-            selfDestroying: true,
-            injectRegister: false,
             strategies: "generateSW",
             manifest: {
                 name: 'MCalc',

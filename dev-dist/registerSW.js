@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/mcalc/dev-sw.js?dev-sw', { scope: '/mcalc/', type: 'classic' })
