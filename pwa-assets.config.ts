@@ -10,10 +10,24 @@ export default defineConfig({
     },
     preset: {
         ...preset,
+        apple: {
+            ...preset.apple,
+            resizeOptions: {
+                ...preset.apple.resizeOptions,
+                background: '#49ac67',
+            },
+        },
+        maskable: {
+            ...preset.maskable,
+            resizeOptions: {
+                ...preset.maskable.resizeOptions,
+                background: '#49ac67',
+            },
+        },
         appleSplashScreens: createAppleSplashScreens({
             padding: 0.3,
             resizeOptions: { fit: 'contain', background: '#49ac67' },
-            darkResizeOptions: { fit: 'contain', background: '#1c1c1e' },
+            darkResizeOptions: { fit: 'contain', background: '#49ac67' },
             linkMediaOptions: {
                 log: true,
                 addMediaScreen: true,
