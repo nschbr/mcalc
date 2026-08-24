@@ -46,7 +46,7 @@ export default defineConfig({
             },
             pwaAssets: {
                 config: true,
-                injectThemeColor: true,
+                injectThemeColor: false,
                 overrideManifestIcons: true
             },
             devOptions: {

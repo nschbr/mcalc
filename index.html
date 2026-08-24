@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width">
-    <meta name="theme-color" content="#49ac67" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#49ac67" media="(prefers-color-scheme: dark)">
-    <title>MCalc</title>
-    <style>
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #121212;
-        }
-      }
-      @media (prefers-color-scheme: light) {
-        body {
-          background-color: #fff;
-        }
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width">
+  <meta name="theme-color" content="#49ac67">
+  <title>MCalc</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    @media (prefers-color-scheme: dark) {
       body {
-        min-height: 100%;
-        padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: #121212;
       }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
-  </body>
+    }
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #fff;
+      }
+    }
+    body {
+      min-height: 100%;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/index.tsx"></script>
+</body>
 </html>
