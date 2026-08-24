@@ -12,39 +12,49 @@ export default defineConfig({
     plugins: [
         react(),
         VitePWA({
-            registerType: 'autoUpdate',
+            selfDestroying: true,
+            injectRegister: false,
+            strategies: "generateSW",
             manifest: {
                 name: 'MCalc',
                 short_name: 'MCalc',
                 description: 'MCalc',
-                theme_color: "#0296ff",
-                background_color: "#0296ff",
+                theme_color: "#49ac67",
+                background_color: "#49ac67",
                 icons: [
                     {
-                        "src": "public/manifest-icon-192.maskable.png",
-                        "sizes": "192x192",
-                        "type": "image/png",
-                        "purpose": "any"
+                        "src": "pwa-64x64.png",
+                        "sizes": "64x64",
+                        "type": "image/png"
                     },
                     {
-                        "src": "public/manifest-icon-192.maskable.png",
+                        "src": "pwa-192x192.png",
                         "sizes": "192x192",
-                        "type": "image/png",
-                        "purpose": "maskable"
+                        "type": "image/png"
                     },
                     {
-                        "src": "public/manifest-icon-512.maskable.png",
+                        "src": "pwa-512x512.png",
                         "sizes": "512x512",
-                        "type": "image/png",
-                        "purpose": "any"
+                        "type": "image/png"
                     },
                     {
-                        "src": "public/manifest-icon-512.maskable.png",
+                        "src": "maskable-icon-512x512.png",
                         "sizes": "512x512",
                         "type": "image/png",
                         "purpose": "maskable"
                     }
                 ]
+
+            },
+            pwaAssets: {
+                config: true,
+                injectThemeColor: true,
+                overrideManifestIcons: true
+            },
+            devOptions: {
+                enabled: true,
+                type: 'module',
             }
-        })],
+        })
+    ]
 })
