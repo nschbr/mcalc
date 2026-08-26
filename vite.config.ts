@@ -5,6 +5,9 @@ import {VitePWA} from "vite-plugin-pwa";
 // https://vitejs.dev/config/
 export default defineConfig({
     base: "/mcalc",
+    build: {
+        chunkSizeWarningLimit: 1000
+    },
     server: {
         port: 3000,
         open: true
@@ -12,6 +15,12 @@ export default defineConfig({
     plugins: [
         react(),
         VitePWA({
+            registerType: 'autoUpdate',
+            workbox: {
+                clientsClaim: true,
+                skipWaiting: true,
+                cleanupOutdatedCaches: true,
+            },
             strategies: "generateSW",
             manifest: {
                 name: 'MCalc',

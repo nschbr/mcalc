@@ -9,6 +9,9 @@ import {RouterProvider} from "react-router-dom";
 import {router} from "./router/Router.tsx";
 import StyleProvider from "./provider/StyleProvider.tsx";
 import "./index.css"
+import { registerSW } from 'virtual:pwa-register';
+
+registerSW({ immediate: true });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <StrictMode>

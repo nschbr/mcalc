@@ -46,26 +46,8 @@
       }
     },
     {
-      "key": "mo3",
-      "name": "SL Mango-M-O 0.33",
-      "mark": true,
-      "value": {
-        "default": 3,
-        "return": 2
-      }
-    },
-    {
-      "key": "as3",
-      "name": "SL Apfelschorle 0.33",
-      "mark": true,
-      "value": {
-        "default": 3,
-        "return": 2
-      }
-    },
-    {
-      "key": "sj3",
-      "name": "SL Schw-Johannis 0.33",
+      "key": "slg3",
+      "name": "Schwarzw.-Limo",
       "mark": true,
       "value": {
         "default": 3,
@@ -82,20 +64,20 @@
       }
     },
     {
-      "key": "jms",
-      "name": "Jägermeister Shot",
-      "mark": false,
-      "value": {
-        "default": 3,
-        "return": 0
-      }
-    },
-    {
       "key": "pff",
       "name": "Pfeffi Shot",
       "mark": false,
       "value": {
         "default": 2,
+        "return": 0
+      }
+    },
+    {
+      "key": "jms",
+      "name": "Jägermeister Shot",
+      "mark": false,
+      "value": {
+        "default": 3,
         "return": 0
       }
     }

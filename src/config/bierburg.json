@@ -5,7 +5,7 @@
       "name": "Pils 0.4",
       "mark": true,
       "value": {
-        "default": 3.5,
+        "default": 4,
         "return": 2
       }
     },
@@ -14,7 +14,7 @@
       "name": "Radler 0.4",
       "mark": true,
       "value": {
-        "default": 3.5,
+        "default": 4,
         "return": 2
       }
     },
@@ -23,7 +23,7 @@
       "name": "Helles 0.4",
       "mark": true,
       "value": {
-        "default": 3.5,
+        "default": 4,
         "return": 2
       }
     },
