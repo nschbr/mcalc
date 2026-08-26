@@ -19,7 +19,7 @@ export default defineConfig({
             workbox: {
                 clientsClaim: true,
                 skipWaiting: true,
-                cleanupOutdatedCaches: true,
+                cleanupOutdatedCaches: true
             },
             strategies: "generateSW",
             manifest: {
@@ -61,6 +61,7 @@ export default defineConfig({
             devOptions: {
                 enabled: true,
                 type: 'module',
+                suppressWarnings: true
             }
         })
     ]

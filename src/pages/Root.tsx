@@ -1,8 +1,9 @@
 import {Fragment} from "react";
-import {Grid, Typography} from "@mui/material";
+import {Grid, Stack, Typography} from "@mui/material";
 import Panel from "../components/Panel.tsx";
 import {NavigateFunction, useNavigate} from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import serial from '../config/serial.json';
 
 const Root = () => {
 
@@ -22,7 +23,7 @@ const Root = () => {
                     </Panel>
                 </Grid>
             </Grid>
-            <Grid container spacing={0} padding={1} justifyContent={"center"} sx={{position: "fixed", bottom: 30}}>
+            <Grid container spacing={0} padding={1} justifyContent={"center"} sx={{position: "fixed", bottom: 40}}>
                 <Grid item container spacing={1} padding={1} md={6}>
                     <Panel handleClick={async () => await navigate("/history")} size={12}>
                         <Typography variant={"body1"}>Verlauf</Typography>
@@ -30,7 +31,10 @@ const Root = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={0} padding={1} justifyContent={"center"} sx={{position: "fixed", bottom: 0}}>
-                <Typography variant={"body2"}>Made with <FavoriteIcon sx={{maxHeight: "17px", marginBottom: "-2px"}} fontSize={"small"}/> in Ettlingen</Typography>
+                <Stack direction={"column"} spacing={0} alignItems={"center"} justifyContent={"center"}>
+                    <Typography variant={"body2"}>Made with <FavoriteIcon sx={{maxHeight: "17px", marginBottom: "-2px"}} fontSize={"small"}/> in Ettlingen</Typography>
+                    <Typography color={"primary"} variant={"caption"}>SN: {serial.serial}</Typography>
+                </Stack>
             </Grid>
         </Fragment>
     )
